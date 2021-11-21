@@ -13,7 +13,7 @@ export class AppComponent {
     { city: 'Istanbul', noOfCases: 2340 },
     { city: 'Hamburg', noOfCases: 865 },
   ];
-  showAll: boolean = false;
+  showAll: boolean = false; 
 
   getNumberOfCasesForCity(): void {
     if (this.isSearchTermValid()) {
