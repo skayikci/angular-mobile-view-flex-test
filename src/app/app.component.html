@@ -1,0 +1,38 @@
+<div class="mobile-screen">
+  <div class="header">
+    <h1>HEADER</h1>
+    <div class="search-box">
+      <input type="text" class="search-text" [(ngModel)]="searchInput" />
+      <div class="search-actions">
+        <i
+          class="glyphicon glyphicon-search search-button"
+          (click)="getNumberOfCasesForCity()"
+        ></i>
+        <i
+          class="glyphicon glyphicon-remove search-clear-button"
+          (click)="resetSearchAndResult()"
+        >
+        </i>
+        <i
+          class="glyphicon glyphicon-th-list search-show-all-button"
+          (click)="showAllCases()"
+        ></i>
+      </div>
+    </div>
+  </div>
+  <div class="body">
+    <h2>BODY</h2>
+    <div class="search-result" [class.error-search]="containsError">
+      {{ searchResultText }}
+    </div>
+    <div class="show-all-results" *ngIf="showAll">
+      <div class="result-content" *ngFor="let cases of numberOfCases">
+        <div class="city-name">{{ cases.city }}</div>
+        <div class="number-of-cases">{{ cases.noOfCases }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <h2>FOOTER</h2>
+  </div>
+</div>

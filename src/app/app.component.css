@@ -1,0 +1,51 @@
+:root {
+  --icon-button-size: 15px;
+}
+
+.mobile-screen {
+  background-color: black;
+  /*border , border-style, border-color*/
+  border: 10px solid blueviolet;
+  color: white;
+  max-width: 375px;
+  max-height: 812px;
+}
+
+.search-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 4px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-button,
+.search-clear-button,
+.search-show-all-button {
+  font-size: var(--icon-button-size);
+  border-radius: 25px;
+  border: 3px solid gray;
+  padding: 5px;
+}
+
+.search-text {
+  background-color: black;
+  border: 3px solid gray;
+}
+
+.error-search {
+  font-weight: bold;
+  color: red;
+}
+
+.show-all-results {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
